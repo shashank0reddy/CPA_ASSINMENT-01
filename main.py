@@ -82,7 +82,7 @@ def booking_management():
         end_time = data.get('end_time')
         
         if not all([room_id, room_name, date, start_time, end_time]):
-            return jsonify({'error': 'Missing required fields'}), 400
+            return jsonify({'error': 'Missing required booking fields (room, date, time)'}), 400
             
         success, message = firestore_client.create_booking_transaction(
             RTDB_URL, room_id, room_name, user_uid, date, start_time, end_time)
