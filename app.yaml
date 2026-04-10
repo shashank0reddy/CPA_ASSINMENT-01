@@ -1,11 +1,9 @@
 runtime: python39
 
 env_variables:
-  # Replace with your Firebase / Google Cloud Project ID
-  GOOGLE_CLOUD_PROJECT: "YOUR-FIREBASE-PROJECT-ID"
+  GOOGLE_CLOUD_PROJECT: "pywebsite-18291"
   
-  # Replace 'YourStudentNumber' with your actual student number
-  FIRESTORE_DB_NAME: "A1-YourStudentNumber"
+  FIRESTORE_DB_NAME: "A1-3199169"
 
 handlers:
 - url: /static
