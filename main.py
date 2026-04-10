@@ -48,7 +48,8 @@ def room_management():
     
     if request.method == 'POST':
         data = request.get_json()
-        room_name = data.get('name', '')
+        if not room_name.strip():
+            return jsonify({'error': 'Room name cannot be empty'}), 400
         success, message = firestore_client.create_room(RTDB_URL, room_name, user_uid)
         
         if success:
